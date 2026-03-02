@@ -3,6 +3,7 @@ from measures_of_centrality import Centrality
 from measure_of_spread import Spread
 from plotting import BoxPlot
 from correlation_coefficient import Correlation
+from linear_regression import Regression
 
 class App:
     def __init__(self):
@@ -11,12 +12,11 @@ class App:
         self.spread = Spread()
         self.plotting = BoxPlot()
         self.corr = Correlation()
+        self.reg = Regression()
         self._x_y_data = [
-            (1,2),
-            (2,4),
-            (3,5),
-            (4,4),
-            (5,5)
+            (-2,-1),
+            (1,1),
+            (3,2)
         ]
 
     def menu(self):
@@ -29,6 +29,7 @@ class App:
             print("2. Calculate Spread")
             print("3. Box Plot")
             print("4. Correlation")
+            print("5. Regression")
             print("0. Exit")
             print(self.data)
             choice = int(input("Enter your choice: "))
@@ -40,6 +41,8 @@ class App:
                 self.plotting.menu(self.data)
             elif choice == 4:
                 self.corr.menu(self._x_y_data)
+            elif choice == 5:
+                self.reg.menu(self._x_y_data)
             elif choice == 0:
                 exit()
             else:
