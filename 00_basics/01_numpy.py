@@ -30,6 +30,24 @@ class NumPyBasics:
         print("\nnp.random.randint(1,10(2,2)): \n", np.random.randint(1,10,(2,2)))
         # This creates matrix of size 2x2 of all values between 1,10
 
+        # Array Properties
+
+        print("Array Properties")
+
+        a = np.array([[1,2,3,4],[3,4,5,6]])
+        print(a)
+        print(a.shape) # Return (2,4)
+        print(a.ndim) # Return number of rows
+        print(a.size) # Return size of array (elements)
+        print(a.dtype) # Return datatypes
+
+        b = np.array([1,2,3,4,5,6,7])
+        print(b[0])
+        print(b[2])
+        print(b[-1]) # Return lsat element of the array
+        print(b[1:3])
+        print("Mean: ",np.mean(a))
+
         
 
     def menu(self):
