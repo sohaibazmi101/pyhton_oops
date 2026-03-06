@@ -48,7 +48,34 @@ class NumPyBasics:
         print(b[1:3])
         print("Mean: ",np.mean(a))
 
-        
+        # Vectorization
+
+        c = [1,2,3,4,5]
+        result = []
+        for i in c:
+            result.append(i * 2)
+        print(result)
+
+        d = np.array([1,2,3,4,5])
+        res = d * 2
+        print(res)
+
+        a = np.array([1,2,3,4,5])
+        b = np.array([5,6,7,8,9])
+        print("Array Ops: \n")
+        print(a + b)
+        print(a - b)
+        print(a * b)
+        print(a / c)
+        print(a % b)
+
+        print("Mathematical Formulae: ")
+        print(np.sqrt(a))
+        print(np.log(a))
+        print(np.exp(a))
+        print(np.sin(a))
+        print(np.std(a))
+
 
     def menu(self):
         while True:
