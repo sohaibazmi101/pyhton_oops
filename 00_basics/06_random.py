@@ -1,5 +1,5 @@
 from numpy import random
-
+import numpy as np
 
 # a = random.randint(10, 15, 10)
 # print(a)
@@ -27,5 +27,14 @@ from numpy import random
 # d = random.choice(c, size=(3,5))
 # print(d)
 
-a = random.uniform(40,50,5)
-print(a)
+# a = random.uniform(40,50,5)
+# print(a)
+
+# • Find array elements which are greater than 5.
+
+print("• Find array elements which are greater than 5.")
+
+a = random.randint(1,20, 20)
+for n in a:
+    if n > 5:
+        print(n,end=" ")
